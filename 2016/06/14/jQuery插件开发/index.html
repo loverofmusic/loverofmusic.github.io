@@ -3,15 +3,9 @@
 <li>通过 <code>$.fn</code>  向jQuery添加新的方法</li>
 </ol>
 <h4 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式"></a>第一种方式</h4><p>在jQuery身上添加了一个静态方法，栗子：</p>
-<p><code>$.extend({
-  sayHello: function(name){
-    console.log(&#39;Hello,&#39; + (name ? name: &#39;Dude&#39;) + &#39;!&#39;);
-  }
-})
-$.sayHello();//调用
-$.sayHello(&#39;Wayou&#39;);//带参调用</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$.extend(&#123;</span><br><span class="line">  sayHello: <span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Hello,'</span> + (name ? name: <span class="string">'Dude'</span>) + <span class="string">'!'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">$.sayHello();<span class="comment">//调用</span></span><br><span class="line">$.sayHello(<span class="string">'Wayou'</span>);<span class="comment">//带参调用</span></span><br></pre></td></tr></table></figure>
 <p>直接通过$符号调用，如上例当中：$.sayHello()。</p>
-<h4 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h4><p>往$.fn上面添加一个方法，<em>方法名是我们的插件名称</em>，然后我们的插件代码在这个方法里面展开），栗子：</p>
+<h4 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h4><p>往$.fn上面添加一个方法，<em>方法名是我们的插件名称</em>，然后我们的插件代码在这个方法里面展开，栗子：</p>
 <p>$.fn.myPlugin=function(){//在这里面,this指的是用jQuery选中的元素//example :$(‘a’),则this=$(‘a’)this.css(‘color’,’red’);}<br>在上面插件代码中，我们在this身上调用jQuery的css()方法，也就相当于在调用 $(‘a’).css()</p>
 <script src="jquery-1.11.0.min.js"></script><script src="jquery.myplugin.js"></script><script type="text/javascript">$(function(){$('a').myPlugin();})</script>
 
