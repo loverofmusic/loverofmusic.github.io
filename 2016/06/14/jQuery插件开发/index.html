@@ -1,4 +1,20 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> jQuery插件开发 · Protea</title><meta name="description" content="jQuery插件开发 - 张聪"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/loverofmusic" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://www.ximalaya.com/2456872/follow/" target="_blank" class="nav-list-link">XIMALAYA</a></li><li class="nav-list-item"><a href="https://www.zhihu.com/people/zhang-cong-84-8" target="_blank" class="nav-list-link">ZHIHU</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">jQuery插件开发</h1><div class="post-info">Jun 14, 2016</div><div class="post-content"></div></article></div></section><footer><div class="paginator"><a href="/2016/06/11/我的第一篇测试文章/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'seansun';
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> jQuery插件开发 · Protea</title><meta name="description" content="jQuery插件开发 - 张聪"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/loverofmusic" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http://www.ximalaya.com/2456872/follow/" target="_blank" class="nav-list-link">XIMALAYA</a></li><li class="nav-list-item"><a href="https://www.zhihu.com/people/zhang-cong-84-8" target="_blank" class="nav-list-link">ZHIHU</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">jQuery插件开发</h1><div class="post-info">Jun 14, 2016</div><div class="post-content"><h4 id="最常用的两种方式："><a href="#最常用的两种方式：" class="headerlink" title="最常用的两种方式："></a>最常用的两种方式：</h4><ol>
+<li>通过 <code>$.extend()</code> 来扩展jQuery</li>
+<li>通过 <code>$.fn</code>  向jQuery添加新的方法</li>
+</ol>
+<h4 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式"></a>第一种方式</h4><p>在jQuery身上添加了一个静态方法，栗子：</p>
+<p><code>$.extend({
+  sayHello: function(name){
+    console.log(&#39;Hello,&#39; + (name ? name: &#39;Dude&#39;) + &#39;!&#39;);
+  }
+})
+$.sayHello();//调用
+$.sayHello(&#39;Wayou&#39;);//带参调用</code></p>
+<p>直接通过$符号调用，如上例当中：$.sayHello()。</p>
+<h4 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h4><p>往$.fn上面添加一个方法，<em>方法名是我们的插件名称</em>，然后我们的插件代码在这个方法里面展开），栗子：</p>
+<p>$.fn.myPlugin=function(){//在这里面,this指的是用jQuery选中的元素//example :$(‘a’),则this=$(‘a’)this.css(‘color’,’red’);}<br>在上面插件代码中，我们在this身上调用jQuery的css()方法，也就相当于在调用 $(‘a’).css()</p>
+<p><script src="jquery-1.11.0.min.js"></script><script src="jquery.myplugin.js"></script><script type="text/javascript">$(function(){$(‘a’).myPlugin();})</script><br> 调用插件后链接字体变成红色。</p>
+</div></article></div></section><footer><div class="paginator"><a href="/2016/06/11/我的第一篇测试文章/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'seansun';
 var disqus_identifier = '2016/06/14/jQuery插件开发/';
 var disqus_title = 'jQuery插件开发';
 var disqus_url = 'http://loverofmusic.github.io/2016/06/14/jQuery插件开发/';
