@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://loverofmusic.github.io/"/>
-  <updated>2016-06-14T06:26:35.000Z</updated>
+  <updated>2016-06-14T06:38:49.000Z</updated>
   <id>http://loverofmusic.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://loverofmusic.github.io/2016/06/14/jQuery%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
     <id>http://loverofmusic.github.io/2016/06/14/jQuery插件开发/</id>
     <published>2016-06-14T05:37:34.000Z</published>
-    <updated>2016-06-14T06:26:35.000Z</updated>
+    <updated>2016-06-14T06:38:49.000Z</updated>
     
     <content type="html">&lt;h4 id=&quot;最常用的两种方式：&quot;&gt;&lt;a href=&quot;#最常用的两种方式：&quot; class=&quot;headerlink&quot; title=&quot;最常用的两种方式：&quot;&gt;&lt;/a&gt;最常用的两种方式：&lt;/h4&gt;&lt;ol&gt;
 &lt;li&gt;通过 &lt;code&gt;$.extend()&lt;/code&gt; 来扩展jQuery&lt;/li&gt;
@@ -37,7 +37,10 @@ $.sayHello(&amp;#39;Wayou&amp;#39;);//带参调用&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;直接通过$符号调用，如上例当中：$.sayHello()。&lt;/p&gt;
 &lt;h4 id=&quot;第二种方式&quot;&gt;&lt;a href=&quot;#第二种方式&quot; class=&quot;headerlink&quot; title=&quot;第二种方式&quot;&gt;&lt;/a&gt;第二种方式&lt;/h4&gt;&lt;p&gt;往$.fn上面添加一个方法，&lt;em&gt;方法名是我们的插件名称&lt;/em&gt;，然后我们的插件代码在这个方法里面展开），栗子：&lt;/p&gt;
 &lt;p&gt;$.fn.myPlugin=function(){//在这里面,this指的是用jQuery选中的元素//example :$(‘a’),则this=$(‘a’)this.css(‘color’,’red’);}&lt;br&gt;在上面插件代码中，我们在this身上调用jQuery的css()方法，也就相当于在调用 $(‘a’).css()&lt;/p&gt;
-&lt;p&gt;&lt;script src=&quot;jquery-1.11.0.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;jquery.myplugin.js&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;$(function(){$(‘a’).myPlugin();})&lt;/script&gt;&lt;br&gt; 调用插件后链接字体变成红色。&lt;/p&gt;
+&lt;script src=&quot;jquery-1.11.0.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;jquery.myplugin.js&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;$(function(){$(&#39;a&#39;).myPlugin();})&lt;/script&gt;
+
+&lt;p&gt;调用插件后链接字体变成红色。&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;tip&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    预处理器很强大，但它只是编写 CSS 的辅助工具。出于对扩展和维护等方面的考虑，在大型项目中有必要使用预处理器构建 CSS；但是对于小型项目，原生的 CSS 可能是一种更好的选择。不要肆意使用预处理器！&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
     
     <summary type="html">
@@ -69,7 +72,7 @@ $.sayHello(&amp;#39;Wayou&amp;#39;);//带参调用&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&quot;三级&quot;&gt;&lt;a href=&quot;#三级&quot; class=&quot;headerlink&quot; title=&quot;三级&quot;&gt;&lt;/a&gt;三级&lt;/h3&gt;&lt;hr&gt;
 &lt;h4 id=&quot;四级&quot;&gt;&lt;a href=&quot;#四级&quot; class=&quot;headerlink&quot; title=&quot;四级&quot;&gt;&lt;/a&gt;四级&lt;/h4&gt;&lt;hr&gt;
 &lt;p&gt;blog &lt;a href=&quot;http://loverofmusic.github.io&quot;&gt;http://loverofmusic.github.io&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;email &lt;a href=&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#58;&amp;#49;&amp;#x30;&amp;#x37;&amp;#51;&amp;#57;&amp;#55;&amp;#50;&amp;#48;&amp;#x30;&amp;#48;&amp;#64;&amp;#x71;&amp;#113;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#49;&amp;#x30;&amp;#x37;&amp;#51;&amp;#57;&amp;#55;&amp;#50;&amp;#48;&amp;#x30;&amp;#48;&amp;#64;&amp;#x71;&amp;#113;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&lt;/a&gt;和&lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#x3a;&amp;#x70;&amp;#114;&amp;#111;&amp;#x74;&amp;#x65;&amp;#97;&amp;#x2e;&amp;#x7a;&amp;#120;&amp;#x63;&amp;#x63;&amp;#64;&amp;#x67;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#x70;&amp;#114;&amp;#111;&amp;#x74;&amp;#x65;&amp;#97;&amp;#x2e;&amp;#x7a;&amp;#120;&amp;#x63;&amp;#x63;&amp;#64;&amp;#x67;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;email &lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#x3a;&amp;#x31;&amp;#48;&amp;#x37;&amp;#51;&amp;#57;&amp;#55;&amp;#x32;&amp;#x30;&amp;#48;&amp;#x30;&amp;#x40;&amp;#x71;&amp;#x71;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#x31;&amp;#48;&amp;#x37;&amp;#51;&amp;#57;&amp;#55;&amp;#x32;&amp;#x30;&amp;#48;&amp;#x30;&amp;#x40;&amp;#x71;&amp;#x71;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;和&lt;a href=&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x70;&amp;#114;&amp;#x6f;&amp;#x74;&amp;#x65;&amp;#97;&amp;#x2e;&amp;#x7a;&amp;#x78;&amp;#99;&amp;#99;&amp;#x40;&amp;#x67;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#x70;&amp;#114;&amp;#x6f;&amp;#x74;&amp;#x65;&amp;#97;&amp;#x2e;&amp;#x7a;&amp;#x78;&amp;#99;&amp;#99;&amp;#x40;&amp;#x67;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我的引用引用引用引用引用引用引用引用引用引用引用引用引用引用引用引用引用引用引用引用引用引用引用引用引用引用&lt;/p&gt;
 &lt;/blockquote&gt;

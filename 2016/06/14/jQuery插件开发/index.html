@@ -13,7 +13,10 @@ $.sayHello(&#39;Wayou&#39;);//带参调用</code></p>
 <p>直接通过$符号调用，如上例当中：$.sayHello()。</p>
 <h4 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h4><p>往$.fn上面添加一个方法，<em>方法名是我们的插件名称</em>，然后我们的插件代码在这个方法里面展开），栗子：</p>
 <p>$.fn.myPlugin=function(){//在这里面,this指的是用jQuery选中的元素//example :$(‘a’),则this=$(‘a’)this.css(‘color’,’red’);}<br>在上面插件代码中，我们在this身上调用jQuery的css()方法，也就相当于在调用 $(‘a’).css()</p>
-<p><script src="jquery-1.11.0.min.js"></script><script src="jquery.myplugin.js"></script><script type="text/javascript">$(function(){$(‘a’).myPlugin();})</script><br> 调用插件后链接字体变成红色。</p>
+<script src="jquery-1.11.0.min.js"></script><script src="jquery.myplugin.js"></script><script type="text/javascript">$(function(){$('a').myPlugin();})</script>
+
+<p>调用插件后链接字体变成红色。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tip"</span>&gt;</span></span><br><span class="line">    预处理器很强大，但它只是编写 CSS 的辅助工具。出于对扩展和维护等方面的考虑，在大型项目中有必要使用预处理器构建 CSS；但是对于小型项目，原生的 CSS 可能是一种更好的选择。不要肆意使用预处理器！</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </div></article></div></section><footer><div class="paginator"><a href="/2016/06/11/我的第一篇测试文章/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'seansun';
 var disqus_identifier = '2016/06/14/jQuery插件开发/';
 var disqus_title = 'jQuery插件开发';
